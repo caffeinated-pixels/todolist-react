@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function NewItemEntry() {
+export default function NewItemEntry(props) {
   return (
     <section className="newItemEntry">
       <form id="itemEntryForm">
@@ -19,6 +19,7 @@ export default function NewItemEntry() {
           title="Add new item"
           aria-label="Add new item to list"
           tabIndex="0"
+          onClick={props.handleSubmit}
         >
           +
         </button>
