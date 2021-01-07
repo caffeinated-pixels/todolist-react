@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import NewItemEntry from './NewItemEntry'
 import ListContainer from './ListContainer'
 
-class App extends Component {
+export default class App extends Component {
+  state = { list: [], toDoItem: '' }
+
   render() {
     return (
       <main>
@@ -12,5 +14,3 @@ class App extends Component {
     )
   }
 }
-
-export default App
