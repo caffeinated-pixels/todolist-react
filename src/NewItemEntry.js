@@ -2,23 +2,23 @@ import React from 'react'
 
 export default function NewItemEntry() {
   return (
-    <section class="newItemEntry">
+    <section className="newItemEntry">
       <form id="itemEntryForm">
-        <label for="newItemEntry">Enter a new to-do item</label>
+        <label htmlFor="newItemEntry">Enter a new to-do item</label>
         <input
           id="newItem"
           type="text"
           size="40"
-          autocomplete="off"
+          autoComplete="off"
           placeholder="Add Item"
-          tabindex="0"
+          tabIndex="0"
         />
         <button
           id="addItem"
-          class="button"
+          className="button"
           title="Add new item"
           aria-label="Add new item to list"
-          tabindex="0"
+          tabIndex="0"
         >
           +
         </button>
