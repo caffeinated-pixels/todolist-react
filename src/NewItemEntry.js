@@ -12,6 +12,8 @@ export default function NewItemEntry(props) {
           autoComplete="off"
           placeholder="Add Item"
           tabIndex="0"
+          value={props.value}
+          onChange={props.handleTextInput}
         />
         <button
           id="addItem"
