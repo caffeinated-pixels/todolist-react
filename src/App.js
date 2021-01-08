@@ -27,20 +27,28 @@ export default class App extends Component {
   processSubmission = () => {
     const newEntryText = this.state.toDoItem
     if (!newEntryText.length) return
-    console.log('stop clicking me!')
-    console.log(`Input = ${newEntryText}`)
+    // console.log('stop clicking me!')
+    // console.log(`Input = ${newEntryText}`)
 
     // update toDoList, clear toDoItem
     this.setState(prevState => ({
       toDoList: [...prevState.toDoList, newEntryText],
       toDoItem: ''
     }))
+
+    // TODO: update persistent data
   }
 
   handleClear = () => {
-    // do something
-    console.log('Clear!')
-    this.setState(prevState => ({ ...prevState, toDoList: [] }))
+    const { toDoList } = this.state
+    if (toDoList.length) {
+      const confirmed = window.confirm('Are you sure')
+      if (confirmed) {
+        this.setState(prevState => ({ ...prevState, toDoList: [] }))
+      }
+    }
+
+    // TODO: update persistent data
   }
 
   render() {
