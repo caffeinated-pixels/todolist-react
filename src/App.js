@@ -42,7 +42,9 @@ export default class App extends Component {
   handleClear = () => {
     const { toDoList } = this.state
     if (toDoList.length) {
-      const confirmed = window.confirm('Are you sure')
+      const confirmed = window.confirm(
+        'Are you sure you want to delete the entire list?'
+      )
       if (confirmed) {
         this.setState(prevState => ({ ...prevState, toDoList: [] }))
       }
