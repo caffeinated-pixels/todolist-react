@@ -3,7 +3,7 @@ import React from 'react'
 export default function NewItemEntry(props) {
   return (
     <section className="newItemEntry">
-      <form id="itemEntryForm">
+      <form id="itemEntryForm" onSubmit={props.handleSubmit}>
         <label htmlFor="newItemEntry">Enter a new to-do item</label>
         <input
           id="newItem"
@@ -19,7 +19,6 @@ export default function NewItemEntry(props) {
           title="Add new item"
           aria-label="Add new item to list"
           tabIndex="0"
-          onClick={props.handleSubmit}
         >
           +
         </button>
