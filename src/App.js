@@ -35,27 +35,13 @@ export default class App extends Component {
       toDoList: [...prevState.toDoList, newEntryText],
       toDoItem: ''
     }))
-
-    // this.buildListItem()
   }
 
-  // buildListItem = () => {
-  //   console.log('buildListItem')
-  //   const toDoItems = this.state.list.map((toDoItem, i) => {
-  //     return (
-  //       <div className="item">
-  //         <input
-  //           type="checkbox"
-  //           key={i}
-  //           id={i}
-  //           tabIndex="0"
-  //           className="checkbox"
-  //         />
-  //         <label htmlFor={'i'}>{toDoItem}</label>
-  //       </div>
-  //     )
-  //   })
-  // }
+  handleClear = () => {
+    // do something
+    console.log('Clear!')
+    this.setState(prevState => ({ ...prevState, toDoList: [] }))
+  }
 
   render() {
     return (
@@ -65,7 +51,10 @@ export default class App extends Component {
           handleSubmit={this.handleSubmit}
           value={this.state.toDoItem}
         />
-        <ListContainer toDoList={this.state.toDoList} />
+        <ListContainer
+          toDoList={this.state.toDoList}
+          handleClear={this.handleClear}
+        />
       </main>
     )
   }
