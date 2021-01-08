@@ -6,7 +6,6 @@ After completing the tutorial, I figured it would be a useful learning experienc
 
 ## ToDo list:
 
-- clear list
 - clear checked item
 - put list into localstorage API
 - pull list from localstorage API
