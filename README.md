@@ -8,8 +8,6 @@ After completing the tutorial, I figured it would be a useful learning experienc
 
 - debug issue with next item becoming checked
 - set focus on item entry
-- put list into localstorage API
-- pull list from localstorage API
 - customise styling
 
 ## Stretch features
