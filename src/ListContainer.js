@@ -4,7 +4,13 @@ export default function ListContainer(props) {
   const toDoItems = props.toDoList.map((toDoItem, i) => {
     return (
       <div key={i} className="item">
-        <input type="checkbox" id={i} tabIndex="0" className="checkbox" />
+        <input
+          type="checkbox"
+          id={i}
+          tabIndex="0"
+          className="checkbox"
+          onClick={props.handleCheck}
+        />
         <label htmlFor={'i'}>{toDoItem}</label>
       </div>
     )

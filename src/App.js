@@ -9,11 +9,11 @@ export default class App extends Component {
     // TODO: get persistent date from local storage API
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    // console.log toDoList on updating
-    if (prevState.toDoList !== this.state.toDoList)
-      console.log(this.state.toDoList)
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   // console.log toDoList on updating
+  //   if (prevState.toDoList !== this.state.toDoList)
+  //     console.log(this.state.toDoList)
+  // }
 
   handleTextInput = event => {
     this.setState(prevState => ({ ...prevState, toDoItem: event.target.value }))
@@ -53,6 +53,20 @@ export default class App extends Component {
     // TODO: update persistent data
   }
 
+  handleCheck = event => {
+    const index = Number(event.target.id) // convert string to number
+    // console.log(`Checkbox id = ${index}`)
+
+    setTimeout(() => {
+      this.setState(prevState => {
+        const newList = prevState.toDoList.filter((item, i) => index !== i)
+        return { ...prevState, toDoList: [...newList] }
+      })
+    }, 1000)
+
+    // TODO: update persistent data
+  }
+
   render() {
     return (
       <main>
@@ -64,6 +78,7 @@ export default class App extends Component {
         <ListContainer
           toDoList={this.state.toDoList}
           handleClear={this.handleClear}
+          handleCheck={this.handleCheck}
         />
       </main>
     )
