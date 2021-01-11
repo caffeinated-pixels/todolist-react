@@ -32,7 +32,10 @@ export default class App extends Component {
 
     // update toDoList, clear toDoItem
     this.setState(prevState => ({
-      toDoList: [...prevState.toDoList, newEntryText],
+      toDoList: [
+        ...prevState.toDoList,
+        { check: false, toDoItem: newEntryText }
+      ],
       toDoItem: ''
     }))
 
@@ -55,7 +58,12 @@ export default class App extends Component {
 
   handleCheck = event => {
     const index = Number(event.target.id) // convert string to number
-    // console.log(`Checkbox id = ${index}`)
+
+    this.setState(prevState => {
+      const updatedList = [...prevState.toDoList]
+      updatedList[index].check = !updatedList[index].check
+      return { ...prevState, toDoList: updatedList }
+    })
 
     setTimeout(() => {
       this.setState(prevState => {

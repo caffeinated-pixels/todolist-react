@@ -1,17 +1,18 @@
 import React from 'react'
 
 export default function ListContainer(props) {
-  const toDoItems = props.toDoList.map((toDoItem, i) => {
+  const toDoItems = props.toDoList.map((entry, i) => {
     return (
       <div key={i} className="item">
         <input
           type="checkbox"
           id={i}
-          tabIndex="0"
+          tabIndex="1"
+          checked={entry.check}
           className="checkbox"
           onChange={props.handleCheck}
         />
-        <label htmlFor={'i'}>{toDoItem}</label>
+        <label htmlFor={i}>{entry.toDoItem}</label>
       </div>
     )
   })
