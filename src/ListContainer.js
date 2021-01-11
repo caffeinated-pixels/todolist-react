@@ -9,7 +9,7 @@ export default function ListContainer(props) {
           id={i}
           tabIndex="0"
           className="checkbox"
-          onClick={props.handleCheck}
+          onChange={props.handleCheck}
         />
         <label htmlFor={'i'}>{toDoItem}</label>
       </div>
