@@ -58,8 +58,6 @@ export default class App extends Component {
 
   handleCheck = event => {
     const index = Number(event.target.id) // convert string to number
-    console.log(event.target.checked)
-    // console.log(`Checkbox id = ${index}`)
 
     this.setState(prevState => {
       const updatedList = [...prevState.toDoList]
