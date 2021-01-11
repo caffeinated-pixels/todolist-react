@@ -6,7 +6,7 @@ After completing the tutorial, I figured it would be a useful learning experienc
 
 ## ToDo list:
 
-- clear checked item
+- debug issue with next item becoming checked
 - put list into localstorage API
 - pull list from localstorage API
 - customise styling
@@ -15,3 +15,7 @@ After completing the tutorial, I figured it would be a useful learning experienc
 
 - leave check items on list; add remove button to each
 - ability to reorder items?
+
+## Checking bug
+
+After a checked item dissappears, the next item in the list becomes checked!!!
