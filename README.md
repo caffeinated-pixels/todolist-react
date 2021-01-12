@@ -7,12 +7,12 @@ After completing the tutorial, I figured it would be a useful learning experienc
 ## ToDo list:
 
 - debug issue with next item becoming checked
-- screen reader equivalence to original app
 - customise styling
 
 ## Stretch features
 
-- leave check items on list; add remove button to each
+- move checked items to new section (strikethrough)
+- add delete button to each item
 - ability to reorder items?
 
 ## Checking bug
