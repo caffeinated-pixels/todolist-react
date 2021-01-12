@@ -59,12 +59,16 @@ export default class App extends Component {
 
   handleCheck = event => {
     const index = Number(event.target.id) // convert string to number
-
+    const removedText = this.state.toDoList[index].toDoItem
     // updated check property for toDoItem in state
     this.setState(prevState => {
       const updatedList = [...prevState.toDoList]
       updatedList[index].check = !updatedList[index].check
-      return { ...prevState, toDoList: updatedList }
+      return {
+        ...prevState,
+        toDoList: updatedList,
+        confirmation: `${removedText} removed.`
+      }
     }, this.removeItem(index))
 
     // setTimeout(() => {
