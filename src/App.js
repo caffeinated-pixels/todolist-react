@@ -15,9 +15,7 @@ export default class App extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     // update localStorage on changes to state
-    if (prevState.toDoList !== this.state.toDoList)
-      console.log(this.state.toDoList)
-    this.updatePersistentData()
+    if (prevState.toDoList !== this.state.toDoList) this.updatePersistentData()
   }
 
   handleTextInput = event => {
@@ -58,12 +56,23 @@ export default class App extends Component {
   handleCheck = event => {
     const index = Number(event.target.id) // convert string to number
 
+    // updated check property for toDoItem in state
     this.setState(prevState => {
       const updatedList = [...prevState.toDoList]
       updatedList[index].check = !updatedList[index].check
       return { ...prevState, toDoList: updatedList }
-    })
+    }, this.removeItem(index))
 
+    // setTimeout(() => {
+    //   this.setState(prevState => {
+    //     const newList = prevState.toDoList.filter((item, i) => index !== i)
+    //     return { ...prevState, toDoList: [...newList] }
+    //   })
+    // }, 500)
+  }
+
+  removeItem = index => {
+    console.log('remove me')
     setTimeout(() => {
       this.setState(prevState => {
         const newList = prevState.toDoList.filter((item, i) => index !== i)
