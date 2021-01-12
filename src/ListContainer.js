@@ -7,7 +7,7 @@ export default function ListContainer(props) {
         <input
           type="checkbox"
           id={i}
-          tabIndex="1"
+          tabIndex="0"
           checked={entry.check}
           className="checkbox"
           onChange={props.handleCheck}
