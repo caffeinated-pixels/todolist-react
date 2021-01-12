@@ -3,7 +3,7 @@ import NewItemEntry from './NewItemEntry'
 import ListContainer from './ListContainer'
 
 export default class App extends Component {
-  state = { toDoList: [], toDoItem: '' }
+  state = { toDoList: [], toDoItem: '', confirmation: '' }
 
   componentDidMount() {
     // get toDoList from localStorage & update state
@@ -39,7 +39,8 @@ export default class App extends Component {
         ...prevState.toDoList,
         { check: false, toDoItem: newEntryText }
       ],
-      toDoItem: ''
+      toDoItem: '',
+      confirmation: `${newEntryText} added.`
     }))
   }
 
@@ -104,6 +105,7 @@ export default class App extends Component {
           toDoList={this.state.toDoList}
           handleClear={this.handleClear}
           handleCheck={this.handleCheck}
+          confirmation={this.state.confirmation}
         />
       </main>
     )

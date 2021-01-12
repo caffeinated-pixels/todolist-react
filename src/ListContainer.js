@@ -34,7 +34,9 @@ export default function ListContainer(props) {
       </div>
       <hr />
       <div id="listItems">{toDoItems}</div>
-      <p id="confirmation" className="confirmation" aria-live="assertive"></p>
+      <p id="confirmation" className="confirmation" aria-live="assertive">
+        {props.confirmation}
+      </p>
     </section>
   )
 }
