@@ -13,6 +13,7 @@ After completing the tutorial, I figured it would be a useful learning experienc
 
 - move checked items to new section (strikethrough)
 - add delete button to each item
+- multiple list support
 - ability to reorder items?
 
 ## Checking bug
