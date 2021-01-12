@@ -7,7 +7,7 @@ After completing the tutorial, I figured it would be a useful learning experienc
 ## ToDo list:
 
 - debug issue with next item becoming checked
-- set focus on item entry
+- screen reader equivalence to original app
 - customise styling
 
 ## Stretch features
