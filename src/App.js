@@ -15,7 +15,10 @@ export default class App extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     // update localStorage on changes to state
-    if (prevState.toDoList !== this.state.toDoList) this.updatePersistentData()
+    if (prevState.toDoList !== this.state.toDoList) {
+      this.setFocusOnItemEntry()
+      this.updatePersistentData()
+    }
   }
 
   handleTextInput = event => {
@@ -79,6 +82,11 @@ export default class App extends Component {
         return { ...prevState, toDoList: [...newList] }
       })
     }, 500)
+  }
+
+  setFocusOnItemEntry = () => {
+    // sets focus back to input on rerender
+    document.getElementById('newItem').focus()
   }
 
   updatePersistentData = () => {
