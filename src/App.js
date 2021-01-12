@@ -75,7 +75,6 @@ export default class App extends Component {
   }
 
   removeItem = index => {
-    console.log('remove me')
     setTimeout(() => {
       this.setState(prevState => {
         const newList = prevState.toDoList.filter((item, i) => index !== i)
