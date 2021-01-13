@@ -7,10 +7,15 @@ export default class App extends Component {
 
   componentDidMount() {
     // get toDoList from localStorage & update state
-    const storedList = localStorage.getItem('myToDoList')
-    if (typeof storedList !== 'string') return // should be a string
-    const parsedList = JSON.parse(storedList) // convert back to JSON
-    this.setState({ toDoList: parsedList, toDoItem: '' })
+    const storedState = localStorage.getItem('myToDoList')
+    if (typeof storedState !== 'string') return // should be a string
+    const parsedState = JSON.parse(storedState) // convert back to JSON
+    console.log('mounted')
+    console.log(parsedState)
+    this.setState({
+      toDoList: parsedState.toDoList,
+      idTally: parsedState.idTally
+    })
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -53,7 +58,7 @@ export default class App extends Component {
         'Are you sure you want to delete the entire list?'
       )
       if (confirmed) {
-        this.setState(prevState => ({ ...prevState, toDoList: [] }))
+        this.setState(prevState => ({ ...prevState, toDoList: [], idTally: 0 }))
       }
     }
   }
@@ -97,7 +102,7 @@ export default class App extends Component {
   }
 
   updatePersistentData = () => {
-    localStorage.setItem('myToDoList', JSON.stringify(this.state.toDoList))
+    localStorage.setItem('myToDoList', JSON.stringify(this.state))
   }
 
   render() {
