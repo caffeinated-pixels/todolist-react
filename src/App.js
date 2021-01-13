@@ -80,7 +80,7 @@ export default class App extends Component {
     })
   }
 
-  removeItem = stringId => {
+  handleRemove = stringId => {
     const id = Number(stringId)
     const index = this.state.toDoList.findIndex(x => x.id === id)
 
@@ -117,7 +117,7 @@ export default class App extends Component {
           handleClear={this.handleClear}
           handleCheck={this.handleCheck}
           confirmation={this.state.confirmation}
-          handleRemove={this.removeItem}
+          handleRemove={this.handleRemove}
         />
       </main>
     )
