@@ -23,7 +23,7 @@ export default function CheckedItems(props) {
     return (
       <div id="checkedItems">
         <hr />
-        <h3>Completed Items</h3>
+        <h3>{checkedItems.length} Completed Items</h3>
         {checkedItems}
       </div>
     )
