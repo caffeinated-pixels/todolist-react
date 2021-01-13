@@ -129,11 +129,17 @@ section {
   width: 100%;
 }
 
+.listContainer .itemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
 .listContainer .item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 1rem;
 }
 
 .listContainer .item input[type='checkbox'] {

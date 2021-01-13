@@ -24,11 +24,23 @@
     }
   }
 
+  .itemContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    // background-color: lightblue;
+  }
+
+  .delete {
+    // background-color: lightgreen;
+  }
+
   .item {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 1rem;
+    // background-color: lightyellow;
 
     input[type='checkbox'] {
       text-align: center;
