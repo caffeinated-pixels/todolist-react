@@ -136,7 +136,7 @@ section {
   padding-top: 1rem;
 }
 
-.listContainer .item input[type="checkbox"] {
+.listContainer .item input[type='checkbox'] {
   text-align: center;
   width: 2.5rem;
   min-width: 48px;
@@ -146,7 +146,7 @@ section {
   margin-right: 1.5rem;
 }
 
-.listContainer .item input[type="checkbox"]:focus + label {
+.listContainer .item input[type='checkbox']:focus + label {
   text-decoration: underline;
 }
 
@@ -154,7 +154,15 @@ section {
   font-size: 1.1rem;
 }
 
-.listContainer .checked {
+.listContainer .checkedItems {
+  margin-top: 1rem;
+}
+
+.listContainer .checkedItems .checkedHeader {
+  padding-top: 1rem;
+}
+
+.listContainer .checkedItems .checked {
   text-decoration: line-through;
 }
 
