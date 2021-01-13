@@ -1,4 +1,5 @@
 import React from 'react'
+import ListTitle from './ListTitle'
 
 export default function ListContainer(props) {
   const unchecked = props.toDoList.filter(entry => !entry.check)
@@ -38,19 +39,7 @@ export default function ListContainer(props) {
 
   return (
     <section className="listContainer">
-      <div className="listTitle">
-        <h1 tabIndex="0">To-Do List</h1>
-        <button
-          id="clearItems"
-          className="button"
-          title="Clear the list"
-          aria-label="Remove all items from the list"
-          tabIndex="0"
-          onClick={props.handleClear}
-        >
-          clear
-        </button>
-      </div>
+      <ListTitle handleClear={props.handleClear} />
       <hr />
       <div id="listItems">{uncheckedItems}</div>
       <hr />

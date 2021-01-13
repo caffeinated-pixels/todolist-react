@@ -16,7 +16,6 @@ export default class App extends Component {
   componentDidUpdate(prevProps, prevState) {
     // update localStorage on changes to state
     if (prevState.toDoList !== this.state.toDoList) {
-      console.log(this.state.toDoList)
       this.setFocusOnItemEntry()
       this.updatePersistentData()
     }
