@@ -3,7 +3,7 @@ import NewItemEntry from './NewItemEntry'
 import ListContainer from './ListContainer'
 
 export default class App extends Component {
-  state = { toDoList: [], toDoItem: '', confirmation: '' }
+  state = { toDoList: [], toDoItem: '', confirmation: '', idTally: 0 }
 
   componentDidMount() {
     // get toDoList from localStorage & update state
@@ -37,10 +37,11 @@ export default class App extends Component {
     this.setState(prevState => ({
       toDoList: [
         ...prevState.toDoList,
-        { check: false, toDoItem: newEntryText }
+        { id: prevState.idTally, check: false, toDoItem: newEntryText }
       ],
       toDoItem: '',
-      confirmation: `${newEntryText} added.`
+      confirmation: `${newEntryText} added.`,
+      idTally: prevState.idTally + 1
     }))
   }
 
@@ -58,7 +59,8 @@ export default class App extends Component {
   }
 
   handleCheck = event => {
-    const index = Number(event.target.id) // convert string to number
+    const id = Number(event.target.id) // convert string to number
+    const index = this.state.toDoList.findIndex(x => x.id === id)
     const removedText = this.state.toDoList[index].toDoItem
     // updated check property for toDoItem in state
     this.setState(prevState => {
@@ -69,7 +71,7 @@ export default class App extends Component {
         toDoList: updatedList,
         confirmation: `${removedText} removed.`
       }
-    }, this.removeItem(index))
+    })
 
     // setTimeout(() => {
     //   this.setState(prevState => {
