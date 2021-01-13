@@ -17,14 +17,15 @@ export default function CheckedItems(props) {
           />
           <label htmlFor={entry.id}>{entry.toDoItem}</label>
         </div>
-        <p
+        <div
           id={entry.id}
           className="delete"
           onClick={props.handleRemove}
+          role="button"
           aria-label="Delete item"
         >
           X
-        </p>
+        </div>
       </div>
     )
   })
