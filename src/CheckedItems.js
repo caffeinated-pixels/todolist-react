@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 export default function CheckedItems(props) {
   const checked = props.toDoList.filter(entry => entry.check)
@@ -24,7 +26,7 @@ export default function CheckedItems(props) {
           role="button"
           aria-label="Delete item"
         >
-          X
+          <FontAwesomeIcon icon={faTimes} />
         </div>
       </div>
     )
