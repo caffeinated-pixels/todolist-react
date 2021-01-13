@@ -11,8 +11,13 @@ export default function ListContainer(props) {
       <UncheckedItems
         toDoList={props.toDoList}
         handleCheck={props.handleCheck}
+        handleRemove={props.handleRemove}
       />
-      <CheckedItems toDoList={props.toDoList} handleCheck={props.handleCheck} />
+      <CheckedItems
+        toDoList={props.toDoList}
+        handleCheck={props.handleCheck}
+        handleRemove={props.handleRemove}
+      />
       <p id="confirmation" className="confirmation" aria-live="assertive">
         {props.confirmation}
       </p>

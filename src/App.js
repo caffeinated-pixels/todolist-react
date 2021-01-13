@@ -59,8 +59,10 @@ export default class App extends Component {
   }
 
   handleCheck = event => {
-    const id = Number(event.target.id) // convert string to number
-    const index = this.state.toDoList.findIndex(x => x.id === id)
+    const index = this.getIndex(event)
+    // const id = Number(event.target.id) // convert string to number
+    // const index = this.state.toDoList.findIndex(x => x.id === id)
+
     const removedText = this.state.toDoList[index].toDoItem
     // updated check property for toDoItem in state
     this.setState(prevState => {
@@ -72,22 +74,21 @@ export default class App extends Component {
         confirmation: `${removedText} removed.`
       }
     })
-
-    // setTimeout(() => {
-    //   this.setState(prevState => {
-    //     const newList = prevState.toDoList.filter((item, i) => index !== i)
-    //     return { ...prevState, toDoList: [...newList] }
-    //   })
-    // }, 500)
   }
 
-  removeItem = index => {
-    setTimeout(() => {
-      this.setState(prevState => {
-        const newList = prevState.toDoList.filter((item, i) => index !== i)
-        return { ...prevState, toDoList: [...newList] }
-      })
-    }, 500)
+  removeItem = event => {
+    console.log('delete clicked!!!')
+    const index = this.getIndex(event)
+
+    this.setState(prevState => {
+      const newList = prevState.toDoList.filter((item, i) => index !== i)
+      return { ...prevState, toDoList: [...newList] }
+    })
+  }
+
+  getIndex = event => {
+    const id = Number(event.target.id) // convert string to number
+    return this.state.toDoList.findIndex(x => x.id === id)
   }
 
   setFocusOnItemEntry = () => {
@@ -112,6 +113,7 @@ export default class App extends Component {
           handleClear={this.handleClear}
           handleCheck={this.handleCheck}
           confirmation={this.state.confirmation}
+          handleRemove={this.removeItem}
         />
       </main>
     )

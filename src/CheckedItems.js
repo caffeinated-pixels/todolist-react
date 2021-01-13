@@ -17,7 +17,9 @@ export default function CheckedItems(props) {
           />
           <label htmlFor={entry.id}>{entry.toDoItem}</label>
         </div>
-        <p className="delete">X</p>
+        <p id={entry.id} className="delete" onClick={props.handleRemove}>
+          X
+        </p>
       </div>
     )
   })

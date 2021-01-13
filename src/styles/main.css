@@ -136,6 +136,10 @@ section {
   padding-top: 1rem;
 }
 
+.listContainer .delete {
+  cursor: pointer;
+}
+
 .listContainer .item {
   display: flex;
   justify-content: flex-start;
