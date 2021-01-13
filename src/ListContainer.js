@@ -1,6 +1,7 @@
 import React from 'react'
 import ListTitle from './ListTitle'
 import UncheckedItems from './UncheckedItems'
+import CheckedItems from './CheckedItems'
 
 export default function ListContainer(props) {
   const checked = props.toDoList.filter(entry => entry.check)
@@ -30,7 +31,7 @@ export default function ListContainer(props) {
         handleCheck={props.handleCheck}
       />
       <hr />
-      <div id="checkedItems">{checkedItems}</div>
+      <CheckedItems toDoList={props.toDoList} handleCheck={props.handleCheck} />
       <p id="confirmation" className="confirmation" aria-live="assertive">
         {props.confirmation}
       </p>
