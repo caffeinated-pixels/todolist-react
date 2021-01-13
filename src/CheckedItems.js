@@ -19,11 +19,16 @@ export default function CheckedItems(props) {
     )
   })
 
-  if (checkedItems.length > 0) {
+  const itemsNum = checkedItems.length
+  const itemOrItems = itemsNum > 1 ? 'Items' : 'Item'
+
+  if (itemsNum > 0) {
     return (
       <div id="checkedItems">
         <hr />
-        <h3>{checkedItems.length} Completed Items</h3>
+        <h3>
+          {itemsNum} Completed {itemOrItems}
+        </h3>
         {checkedItems}
       </div>
     )
