@@ -10,8 +10,7 @@ export default class App extends Component {
     const storedState = localStorage.getItem('myToDoList')
     if (typeof storedState !== 'string') return // should be a string
     const parsedState = JSON.parse(storedState) // convert back to JSON
-    console.log('mounted')
-    console.log(parsedState)
+
     this.setState({
       toDoList: parsedState.toDoList,
       idTally: parsedState.idTally
