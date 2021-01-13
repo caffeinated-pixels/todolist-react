@@ -60,7 +60,8 @@ export default class App extends Component {
   }
 
   handleCheck = event => {
-    const index = Number(event.target.id) // convert string to number
+    const id = Number(event.target.id) // convert string to number
+    const index = this.state.toDoList.findIndex(x => x.id === id)
     const removedText = this.state.toDoList[index].toDoItem
     // updated check property for toDoItem in state
     this.setState(prevState => {
