@@ -69,7 +69,7 @@ export default class App extends Component {
         toDoList: updatedList,
         confirmation: `${removedText} removed.`
       }
-    }, this.removeItem(index))
+    })
 
     // setTimeout(() => {
     //   this.setState(prevState => {
