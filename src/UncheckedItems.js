@@ -19,15 +19,14 @@ export default function UncheckedItems(props) {
           />
           <label htmlFor={entry.id}>{entry.toDoItem}</label>
         </div>
-        <div
-          id={entry.id}
+
+        <FontAwesomeIcon
+          icon={faTimes}
           className="delete"
-          onClick={props.handleRemove}
+          onClick={() => props.handleRemove(entry.id)}
           role="button"
           aria-label="Delete item"
-        >
-          <FontAwesomeIcon icon={faTimes} />
-        </div>
+        />
       </div>
     )
   })

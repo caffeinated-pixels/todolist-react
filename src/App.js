@@ -80,9 +80,9 @@ export default class App extends Component {
     })
   }
 
-  removeItem = event => {
-    console.log('delete clicked!!!')
-    const index = this.getIndex(event)
+  removeItem = stringId => {
+    const id = Number(stringId)
+    const index = this.state.toDoList.findIndex(x => x.id === id)
 
     this.setState(prevState => {
       const newList = prevState.toDoList.filter((item, i) => index !== i)
