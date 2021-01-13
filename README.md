@@ -7,6 +7,7 @@ After completing the tutorial, I figured it would be a useful learning experienc
 ## ToDo list:
 
 - debug issue with next item becoming checked
+- tidy up handleCheck, removeRemove, getIndex code
 - customise styling
 
 ## Stretch features
@@ -17,6 +18,6 @@ After completing the tutorial, I figured it would be a useful learning experienc
 - multiple list support
 - ability to reorder items?
 
-## Checking bug
+## FontAwesomeIcon click handler
 
-After a checked item dissappears, the next item in the list becomes checked!!!
+Seems that you can't pass an event into a click handler for a <FontAwesomeIcon /> component, even if you place the click handler in a wrapper.
