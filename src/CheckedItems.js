@@ -22,7 +22,6 @@ export default function CheckedItems(props) {
   if (checkedItems.length > 0) {
     return (
       <div id="checkedItems">
-        {' '}
         <hr />
         <h3>Completed Items</h3>
         {checkedItems}
