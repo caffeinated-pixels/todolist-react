@@ -9,13 +9,13 @@ export default function ListContainer(props) {
       <div key={i} className="item">
         <input
           type="checkbox"
-          id={i}
+          id={entry.id}
           tabIndex="0"
           checked={entry.check}
           className="checkbox"
           onChange={props.handleCheck}
         />
-        <label htmlFor={i}>{entry.toDoItem}</label>
+        <label htmlFor={entry.id}>{entry.toDoItem}</label>
       </div>
     )
   })
