@@ -5,7 +5,7 @@ export default function CheckedItems(props) {
 
   const checkedItems = checked.map((entry, i) => {
     return (
-      <div key={i} className="item">
+      <div key={i} className="item checked">
         <input
           type="checkbox"
           id={entry.id}

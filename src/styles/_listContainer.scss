@@ -49,6 +49,10 @@
     }
   }
 
+  .checked {
+    text-decoration: line-through;
+  }
+
   .confirmation {
     position: absolute;
     left: -10000px;

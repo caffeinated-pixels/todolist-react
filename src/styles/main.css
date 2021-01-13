@@ -154,6 +154,10 @@ section {
   font-size: 1.1rem;
 }
 
+.listContainer .checked {
+  text-decoration: line-through;
+}
+
 .listContainer .confirmation {
   position: absolute;
   left: -10000px;
