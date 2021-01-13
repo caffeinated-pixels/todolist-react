@@ -19,5 +19,15 @@ export default function UncheckedItems(props) {
     )
   })
 
-  return <div id="uncheckedItems">{uncheckedItems}</div>
+  const itemsNum = uncheckedItems.length
+  const itemOrItems = itemsNum === 1 ? 'Item' : 'Items'
+
+  return (
+    <div id="uncheckedItems">
+      <h3 className="itemsHeader">
+        {itemsNum} Uncompleted {itemOrItems}
+      </h3>
+      {uncheckedItems}
+    </div>
+  )
 }

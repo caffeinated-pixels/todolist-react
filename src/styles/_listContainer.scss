@@ -48,12 +48,13 @@
       font-size: 1.1rem;
     }
   }
+
+  .itemsHeader {
+    padding-top: 1rem;
+  }
+
   .checkedItems {
     margin-top: 1rem;
-
-    .checkedHeader {
-      padding-top: 1rem;
-    }
 
     .checked {
       text-decoration: line-through;

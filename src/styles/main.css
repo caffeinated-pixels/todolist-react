@@ -154,12 +154,12 @@ section {
   font-size: 1.1rem;
 }
 
-.listContainer .checkedItems {
-  margin-top: 1rem;
+.listContainer .itemsHeader {
+  padding-top: 1rem;
 }
 
-.listContainer .checkedItems .checkedHeader {
-  padding-top: 1rem;
+.listContainer .checkedItems {
+  margin-top: 1rem;
 }
 
 .listContainer .checkedItems .checked {
