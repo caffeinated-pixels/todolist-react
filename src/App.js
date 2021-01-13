@@ -3,7 +3,7 @@ import NewItemEntry from './NewItemEntry'
 import ListContainer from './ListContainer'
 
 export default class App extends Component {
-  state = { toDoList: [], toDoItem: '', confirmation: '' }
+  state = { toDoList: [], toDoItem: '', confirmation: '', idTally: 0 }
 
   componentDidMount() {
     // get toDoList from localStorage & update state
@@ -16,6 +16,7 @@ export default class App extends Component {
   componentDidUpdate(prevProps, prevState) {
     // update localStorage on changes to state
     if (prevState.toDoList !== this.state.toDoList) {
+      console.log(this.state.toDoList)
       this.setFocusOnItemEntry()
       this.updatePersistentData()
     }
@@ -37,10 +38,11 @@ export default class App extends Component {
     this.setState(prevState => ({
       toDoList: [
         ...prevState.toDoList,
-        { check: false, toDoItem: newEntryText }
+        { id: prevState.idTally, check: false, toDoItem: newEntryText }
       ],
       toDoItem: '',
-      confirmation: `${newEntryText} added.`
+      confirmation: `${newEntryText} added.`,
+      idTally: prevState.idTally + 1
     }))
   }
 
