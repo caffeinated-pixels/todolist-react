@@ -4,6 +4,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 export default function itemsCreator(props, isChecked) {
   let filtered = []
 
+  // tests whether to filter for checked or unchecked items
   if (!isChecked) {
     filtered = props.toDoList.filter(entry => !entry.check)
   } else {
