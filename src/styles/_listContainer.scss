@@ -39,7 +39,7 @@
     &:hover,
     &:focus {
       color: #b45922;
-      filter:drop-shadow(1px 1px 2px $dark-grey); 
+      filter: drop-shadow(1px 1px 2px $dark-grey) brightness(120%);
     }
   }
 
