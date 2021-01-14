@@ -11,6 +11,7 @@ After completing the tutorial, I figured it would be a useful learning experienc
 ## Stretch features
 
 - button to hide checked items
+- delete btn only appears on focus
 - multiple list support
 - ability to reorder items?
 
