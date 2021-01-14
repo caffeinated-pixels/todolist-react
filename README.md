@@ -8,6 +8,7 @@ After completing the tutorial, I figured it would be a useful learning experienc
 
 - customise styling
 - remove checked confirmation
+- add footer
 - make new features screen reader friendly
 
 ## Stretch features
