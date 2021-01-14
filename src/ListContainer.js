@@ -17,6 +17,7 @@ export default function ListContainer(props) {
         toDoList={props.toDoList}
         handleCheck={props.handleCheck}
         handleRemove={props.handleRemove}
+        handleClearChecked={props.handleClearChecked}
       />
       <p id="confirmation" className="confirmation" aria-live="assertive">
         {props.confirmation}

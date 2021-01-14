@@ -62,6 +62,13 @@ export default class App extends Component {
     }
   }
 
+  handleClearChecked = () => {
+    this.setState(prevState => {
+      const filteredList = prevState.toDoList.filter(x => !x.check)
+      return { ...prevState, toDoList: filteredList }
+    })
+  }
+
   handleCheck = stringId => {
     const index = this.getIndex(stringId)
 
@@ -115,6 +122,7 @@ export default class App extends Component {
           handleCheck={this.handleCheck}
           confirmation={this.state.confirmation}
           handleRemove={this.handleRemove}
+          handleClearChecked={this.handleClearChecked}
         />
       </main>
     )

@@ -1,6 +1,8 @@
 import React from 'react'
 import itemsCreator from './itemsCreator'
 import isPlural from './isPlural'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckSquare } from '@fortawesome/free-solid-svg-icons'
 
 export default function CheckedItems(props) {
   const checkedItems = itemsCreator(props, true)
@@ -22,9 +24,9 @@ export default function CheckedItems(props) {
             title="Clear all checked checked items"
             aria-label="Remove all checked items"
             tabIndex="0"
-            onClick={props.handleClear}
+            onClick={props.handleClearChecked}
           >
-            clear checked
+            clear <FontAwesomeIcon icon={faCheckSquare} />
           </button>
         </div>
         {checkedItems}
