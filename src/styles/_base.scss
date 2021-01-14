@@ -9,6 +9,9 @@ $button-textcolor: #fff;
 $add-button-color: #4caf50;
 $clear-button-color: #9f6060;
 
+$dark-grey: #1f1f1f;
+$box-shadow: 2px 2px 10px $dark-grey;
+
 @mixin mq($size) {
   @media only screen and (min-width: $size) {
     @content; /* lets us pass content block into mixin */

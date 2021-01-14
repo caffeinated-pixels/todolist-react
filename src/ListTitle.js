@@ -12,7 +12,7 @@ export default function ListTitle(props) {
         tabIndex="0"
         onClick={props.handleClear}
       >
-        clear
+        clear all
       </button>
     </div>
   )
