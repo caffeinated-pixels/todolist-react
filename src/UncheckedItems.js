@@ -15,7 +15,7 @@ export default function UncheckedItems(props) {
             tabIndex="0"
             checked={entry.check}
             className="checkbox"
-            onChange={props.handleCheck}
+            onChange={() => props.handleCheck(entry.id)}
           />
           <label htmlFor={entry.id}>{entry.toDoItem}</label>
         </div>

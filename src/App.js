@@ -62,10 +62,8 @@ export default class App extends Component {
     }
   }
 
-  handleCheck = event => {
-    const index = this.getIndex(event)
-    // const id = Number(event.target.id) // convert string to number
-    // const index = this.state.toDoList.findIndex(x => x.id === id)
+  handleCheck = stringId => {
+    const index = this.getIndex(stringId)
 
     const removedText = this.state.toDoList[index].toDoItem
     // updated check property for toDoItem in state
@@ -81,8 +79,7 @@ export default class App extends Component {
   }
 
   handleRemove = stringId => {
-    const id = Number(stringId)
-    const index = this.state.toDoList.findIndex(x => x.id === id)
+    const index = this.getIndex(stringId)
 
     this.setState(prevState => {
       const newList = prevState.toDoList.filter((item, i) => index !== i)
@@ -90,8 +87,8 @@ export default class App extends Component {
     })
   }
 
-  getIndex = event => {
-    const id = Number(event.target.id) // convert string to number
+  getIndex = stringId => {
+    const id = Number(stringId) // convert string to number
     return this.state.toDoList.findIndex(x => x.id === id)
   }
 
