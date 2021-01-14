@@ -10,9 +10,7 @@ After completing the tutorial, I figured it would be a useful learning experienc
 
 ## Stretch features
 
-- move checked items to new section (strikethrough)
 - button to hide checked items
-- add delete button to each item
 - multiple list support
 - ability to reorder items?
 
