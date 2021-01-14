@@ -5,7 +5,7 @@
   padding: 1rem;
   box-shadow: $box-shadow;
 
-  .listTitle {
+  .listTitle, .checkedHeader {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;

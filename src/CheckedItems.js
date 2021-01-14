@@ -10,11 +10,23 @@ export default function CheckedItems(props) {
 
   if (itemsNum > 0) {
     return (
-      <div id="checkedItems" className="checkedItems" tabIndex="0">
+      <div id="checkedItems" className="checkedItems">
         <hr />
-        <h3 className="itemsHeader">
-          {itemsNum} Completed {itemOrItems}
-        </h3>
+        <div className="checkedHeader">
+          <h3 className="itemsHeader" tabIndex="0">
+            {itemsNum} Completed {itemOrItems}
+          </h3>
+          <button
+            id="clearItems"
+            className="button"
+            title="Clear all checked checked items"
+            aria-label="Remove all checked items"
+            tabIndex="0"
+            onClick={props.handleClear}
+          >
+            clear checked
+          </button>
+        </div>
         {checkedItems}
       </div>
     )

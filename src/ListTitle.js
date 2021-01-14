@@ -7,7 +7,7 @@ export default function ListTitle(props) {
       <button
         id="clearItems"
         className="button"
-        title="Clear the list"
+        title="Clear entire list"
         aria-label="Remove all items from the list"
         tabIndex="0"
         onClick={props.handleClear}
