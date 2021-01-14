@@ -7,7 +7,6 @@ After completing the tutorial, I figured it would be a useful learning experienc
 ## ToDo list:
 
 - debug issue with next item becoming checked
-- tidy up handleCheck, removeRemove, getIndex code
 - single function for creating list itmes (checked/unchecked)?
 - customise styling
 
