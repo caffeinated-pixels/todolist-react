@@ -166,6 +166,8 @@ section {
 
 .listContainer .item label {
   font-size: 1.1rem;
+  padding-right: 1.1rem;
+  word-break: break-word;
 }
 
 .listContainer .itemsHeader {
