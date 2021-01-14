@@ -7,6 +7,7 @@ After completing the tutorial, I figured it would be a useful learning experienc
 ## ToDo list:
 
 - customise styling
+- remove checked confirmation
 - make new features screen reader friendly
 
 ## Stretch features
