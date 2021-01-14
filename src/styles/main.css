@@ -146,6 +146,11 @@ hr {
   cursor: pointer;
 }
 
+.listContainer .delete:hover, .listContainer .delete:focus {
+  color: #b45922;
+  filter: drop-shadow(1px 1px 2px #1f1f1f);
+}
+
 .listContainer .item {
   display: flex;
   justify-content: flex-start;
