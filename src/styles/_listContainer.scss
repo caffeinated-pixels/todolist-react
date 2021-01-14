@@ -5,16 +5,17 @@
   padding: 1rem;
   box-shadow: $box-shadow;
 
-  .listTitle, .checkedHeader {
+  .listTitle {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin-bottom: 0.5rem;
+  }
 
     button {
       font-size: 1rem;
       background-color: $clear-button-color;
       padding: 0 0.2rem;
-      margin-bottom: 0.5rem;
       @include mq(768px) {
         padding: 0 0.5rem;
       }
@@ -23,7 +24,7 @@
     hr {
       width: 100%;
     }
-  }
+
 
   .itemContainer {
     display: flex;
@@ -71,6 +72,12 @@
 
   .checkedItems {
     margin-top: 1rem;
+
+    .checkedHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
 
     label {
       text-decoration: line-through;

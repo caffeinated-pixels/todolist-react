@@ -14,8 +14,8 @@ export default function CheckedItems(props) {
     return (
       <div id="checkedItems" className="checkedItems">
         <hr />
-        <div className="checkedHeader">
-          <h3 className="itemsHeader" tabIndex="0">
+        <div className="checkedHeader itemsHeader">
+          <h3 className="" tabIndex="0">
             {itemsNum} Completed {itemOrItems}
           </h3>
           <button

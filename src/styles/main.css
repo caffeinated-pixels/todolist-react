@@ -111,27 +111,27 @@ hr {
   box-shadow: 2px 2px 8px #1f1f1f;
 }
 
-.listContainer .listTitle, .listContainer .checkedHeader {
+.listContainer .listTitle {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-}
-
-.listContainer .listTitle button, .listContainer .checkedHeader button {
-  font-size: 1rem;
-  background-color: #9f6060;
-  padding: 0 0.2rem;
   margin-bottom: 0.5rem;
 }
 
+.listContainer button {
+  font-size: 1rem;
+  background-color: #9f6060;
+  padding: 0 0.2rem;
+}
+
 @media only screen and (min-width: 768px) {
-  .listContainer .listTitle button, .listContainer .checkedHeader button {
+  .listContainer button {
     padding: 0 0.5rem;
     /* lets us pass content block into mixin */
   }
 }
 
-.listContainer .listTitle hr, .listContainer .checkedHeader hr {
+.listContainer hr {
   width: 100%;
 }
 
@@ -178,6 +178,12 @@ hr {
 
 .listContainer .checkedItems {
   margin-top: 1rem;
+}
+
+.listContainer .checkedItems .checkedHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .listContainer .checkedItems label {

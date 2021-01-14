@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 export default function NewItemEntry(props) {
   return (
@@ -22,7 +24,7 @@ export default function NewItemEntry(props) {
           aria-label="Add new item to list"
           tabIndex="0"
         >
-          +
+          <FontAwesomeIcon icon={faPlus} />
         </button>
       </form>
     </section>
