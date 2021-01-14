@@ -10,6 +10,7 @@ $textbox-bordercolor: lightgray;
 $button-textcolor: #fff;
 $add-button-color: #4caf50;
 $clear-button-color: #9f6060;
+$link-color-hover: #b45922;
 
 $dark-grey: #1f1f1f;
 $box-shadow: 2px 2px 8px $dark-grey;
@@ -26,20 +27,19 @@ $box-shadow: 2px 2px 8px $dark-grey;
   box-sizing: border-box;
 }
 
-html,
+html {
+  font-size: 1rem;
+  @include mq(768px) {
+    font-size: 1.375rem;
+  }
+}
+
 body {
-  font-size: 16px;
   // font-family: "Montserrat", sans-serif;
   font-family: 'Roboto', sans-serif;
   color: $default-font-color;
   width: 100%;
   min-height: 100%;
-  @include mq(768px) {
-    font-size: 22px;
-  }
-}
-
-body {
   padding: 20px;
   background-color: $background-color;
 }
@@ -52,6 +52,32 @@ section {
   border-radius: 10px;
 }
 
+footer {
+  // font-size: 0.95rem;
+  margin-top: 0.7rem;
+  text-align: center;
+  color: $button-textcolor;
+
+  p {
+    padding-bottom: 0.2rem;
+  }
+
+  @include mq(768px) {
+    font-size: 0.8rem;
+  }
+}
+
 hr {
   border-top: 2px solid black;
+}
+
+a {
+  // color: #3399ff;
+  font-weight: 600;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $link-color-hover;
+    filter: drop-shadow(1px 1px 2px $dark-grey) brightness(120%);
+  }
 }

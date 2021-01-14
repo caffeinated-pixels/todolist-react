@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import NewItemEntry from './NewItemEntry'
 import ListContainer from './ListContainer'
+import Footer from './Footer'
 
 export default class App extends Component {
   state = { toDoList: [], toDoItem: '', confirmation: '', idTally: 0 }
@@ -110,21 +111,24 @@ export default class App extends Component {
 
   render() {
     return (
-      <main>
-        <NewItemEntry
-          handleTextInput={this.handleTextInput}
-          handleSubmit={this.handleSubmit}
-          value={this.state.toDoItem}
-        />
-        <ListContainer
-          toDoList={this.state.toDoList}
-          handleClear={this.handleClear}
-          handleCheck={this.handleCheck}
-          confirmation={this.state.confirmation}
-          handleRemove={this.handleRemove}
-          handleClearChecked={this.handleClearChecked}
-        />
-      </main>
+      <div>
+        <main>
+          <NewItemEntry
+            handleTextInput={this.handleTextInput}
+            handleSubmit={this.handleSubmit}
+            value={this.state.toDoItem}
+          />
+          <ListContainer
+            toDoList={this.state.toDoList}
+            handleClear={this.handleClear}
+            handleCheck={this.handleCheck}
+            confirmation={this.state.confirmation}
+            handleRemove={this.handleRemove}
+            handleClearChecked={this.handleClearChecked}
+          />
+        </main>
+        <Footer />
+      </div>
     )
   }
 }
