@@ -126,7 +126,7 @@ hr {
 
 @media only screen and (min-width: 768px) {
   .listContainer button {
-    padding: 0 0.5rem;
+    padding: 0 0.3rem;
     /* lets us pass content block into mixin */
   }
 }
