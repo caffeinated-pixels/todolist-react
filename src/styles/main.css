@@ -176,7 +176,7 @@ section {
   margin-top: 1rem;
 }
 
-.listContainer .checkedItems .checked {
+.listContainer .checkedItems label {
   text-decoration: line-through;
 }
 
