@@ -1,11 +1,12 @@
 import React from 'react'
 import itemsCreator from './itemsCreator'
+import isPlural from './isPlural'
 
 export default function CheckedItems(props) {
   const checkedItems = itemsCreator(props, true)
 
   const itemsNum = checkedItems.length
-  const itemOrItems = itemsNum > 1 ? 'Items' : 'Item'
+  const itemOrItems = isPlural(itemsNum)
 
   if (itemsNum > 0) {
     return (
