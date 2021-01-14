@@ -31,6 +31,7 @@ export default function itemsCreator(props, isChecked) {
           className="delete"
           onClick={() => props.handleRemove(entry.id)}
           role="button"
+          tabIndex="0"
           aria-label="Delete item"
         />
       </div>

@@ -10,7 +10,7 @@ export default function UncheckedItems(props) {
 
   return (
     <div id="uncheckedItems">
-      <h3 className="itemsHeader">
+      <h3 className="itemsHeader" tabIndex="0">
         {itemsNum} Uncompleted {itemOrItems}
       </h3>
       {uncheckedItems}

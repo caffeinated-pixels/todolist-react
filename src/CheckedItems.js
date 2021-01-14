@@ -10,7 +10,7 @@ export default function CheckedItems(props) {
 
   if (itemsNum > 0) {
     return (
-      <div id="checkedItems" className="checkedItems">
+      <div id="checkedItems" className="checkedItems" tabIndex="0">
         <hr />
         <h3 className="itemsHeader">
           {itemsNum} Completed {itemOrItems}
