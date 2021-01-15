@@ -6,6 +6,7 @@ import Footer from './Footer'
 export default class App extends Component {
   state = { toDoList: [], toDoItem: '', confirmation: '', idTally: 0 }
 
+  // LIFECYCLE METHODS
   componentDidMount() {
     // get toDoList from localStorage & update state
     const storedState = localStorage.getItem('myToDoList')
@@ -26,6 +27,7 @@ export default class App extends Component {
     }
   }
 
+  // EVENT HANDLER FUNCTIONS
   handleTextInput = event => {
     this.setState(prevState => ({ ...prevState, toDoItem: event.target.value }))
   }
@@ -33,21 +35,6 @@ export default class App extends Component {
   handleSubmit = event => {
     event.preventDefault() // prevents page reloading on submit
     this.processSubmission()
-  }
-
-  processSubmission = () => {
-    // add input text to state.toDoItem & clear input box
-    const newEntryText = this.state.toDoItem.trim() // trim whitespace
-    if (!newEntryText.length) return // stops if length < 1
-    this.setState(prevState => ({
-      toDoList: [
-        ...prevState.toDoList,
-        { id: prevState.idTally, check: false, toDoItem: newEntryText }
-      ],
-      toDoItem: '',
-      confirmation: `${newEntryText} added.`,
-      idTally: prevState.idTally + 1
-    }))
   }
 
   handleClear = () => {
@@ -89,8 +76,6 @@ export default class App extends Component {
     })
   }
 
-  isChecked = checkProp => (checkProp ? 'unchecked' : 'checked')
-
   handleRemove = stringId => {
     const index = this.getIndex(stringId)
 
@@ -100,10 +85,28 @@ export default class App extends Component {
     })
   }
 
+  // HELPER FUNCTIONS
+  processSubmission = () => {
+    // add input text to state.toDoItem & clear input box
+    const newEntryText = this.state.toDoItem.trim() // trim whitespace
+    if (!newEntryText.length) return // stops if length < 1
+    this.setState(prevState => ({
+      toDoList: [
+        ...prevState.toDoList,
+        { id: prevState.idTally, check: false, toDoItem: newEntryText }
+      ],
+      toDoItem: '',
+      confirmation: `${newEntryText} added.`,
+      idTally: prevState.idTally + 1
+    }))
+  }
+
   getIndex = stringId => {
     const id = Number(stringId) // convert string to number
     return this.state.toDoList.findIndex(x => x.id === id)
   }
+
+  isChecked = checkProp => (checkProp ? 'unchecked' : 'checked')
 
   setFocusOnItemEntry = () => {
     // sets focus back to input on rerender
@@ -111,6 +114,7 @@ export default class App extends Component {
   }
 
   updatePersistentData = () => {
+    // need to store as string
     localStorage.setItem('myToDoList', JSON.stringify(this.state))
   }
 
