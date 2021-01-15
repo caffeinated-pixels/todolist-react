@@ -31,11 +31,10 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 1rem;
-    // background-color: lightblue;
   }
 
   .delete {
-    // background-color: lightgreen;
+    margin-right: 0.75rem;
     cursor: pointer;
     &:hover,
     &:focus {
@@ -48,7 +47,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    // background-color: lightyellow;
 
     input[type='checkbox'] {
       text-align: center;

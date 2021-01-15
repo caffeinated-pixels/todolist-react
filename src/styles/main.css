@@ -169,6 +169,7 @@ a:hover, a:focus {
 }
 
 .listContainer .delete {
+  margin-right: 0.75rem;
   cursor: pointer;
 }
 
