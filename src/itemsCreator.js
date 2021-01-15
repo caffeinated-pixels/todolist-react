@@ -33,6 +33,8 @@ export default function itemsCreator(props, isChecked) {
           role="button"
           tabIndex="0"
           aria-label="Delete item"
+          aria-hidden="false"
+          focusable="true"
         />
       </div>
     )
