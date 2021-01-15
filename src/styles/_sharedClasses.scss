@@ -5,7 +5,9 @@
   min-width: 48px;
   min-height: 48px;
   color: $button-textcolor;
-  border: 2px solid $textbox-bordercolor;
+  // border: 1px solid $textbox-bordercolor;
+  border: none;
+  box-shadow: 2px 1px 4px $dark-grey;
   border-radius: 10px;
   outline: none;
 }
@@ -17,5 +19,6 @@
 .button:hover,
 .button:focus {
   filter: brightness(120%);
+  transform: scale(1.04);
   box-shadow: 4px 2px 5px #000;
 }

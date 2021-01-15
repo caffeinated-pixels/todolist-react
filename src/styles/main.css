@@ -68,7 +68,8 @@ a:hover, a:focus {
   min-width: 48px;
   min-height: 48px;
   color: #fff;
-  border: 2px solid lightgray;
+  border: none;
+  box-shadow: 2px 1px 4px #1f1f1f;
   border-radius: 10px;
   outline: none;
 }
@@ -80,6 +81,7 @@ a:hover, a:focus {
 .button:hover,
 .button:focus {
   filter: brightness(120%);
+  transform: scale(1.04);
   box-shadow: 4px 2px 5px #000;
 }
 
