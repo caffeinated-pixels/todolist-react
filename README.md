@@ -4,9 +4,10 @@ Based on [Dave Gray's excellent YT tutorial](https://youtu.be/y51Cv4wnsPw), this
 
 After completing the tutorial, I figured it would be a useful learning exercise to rebuild the app with React (the tutorial uses HTML, SASS and vanilla JS) and then customise the styling and expand the functionality.
 
-Features I added include:
+Some features I added include:
 
 - checked items now move to a sublist below the main list (rather than being deleted)
+- strikethrough on checked item text
 - button for clearing only the checked items
 - list headers displaying the number of uncompleted and completed items
 - delete button to remove individual item
