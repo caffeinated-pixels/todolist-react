@@ -49,10 +49,6 @@ footer p {
   }
 }
 
-footer .githubIcon {
-  color: black;
-}
-
 hr {
   border-top: 2px solid black;
 }
@@ -65,6 +61,10 @@ a {
 a:hover, a:focus {
   color: #b45922;
   filter: drop-shadow(1px 1px 2px #1f1f1f) brightness(120%);
+}
+
+.githubIcon {
+  color: black;
 }
 
 .button {
