@@ -22,7 +22,6 @@ export default class App extends Component {
   componentDidUpdate(prevProps, prevState) {
     // update localStorage on changes to state
     if (prevState.toDoList !== this.state.toDoList) {
-      this.setFocusOnItemEntry()
       this.updatePersistentData()
     }
   }
@@ -35,6 +34,7 @@ export default class App extends Component {
   handleSubmit = event => {
     event.preventDefault() // prevents page reloading on submit
     this.processSubmission()
+    this.setFocusOnItemEntry()
   }
 
   handleClear = () => {
