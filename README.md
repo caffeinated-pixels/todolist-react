@@ -1,6 +1,6 @@
-# Responsive ToDo App
+# Responsive To-Do App
 
-Based on [Dave Gray's excellent YT tutorial](https://youtu.be/y51Cv4wnsPw), this is a mobile first todo app with a strong focus on accessibilty and being screen-reader friendly.
+Based on [Dave Gray's excellent YT tutorial](https://youtu.be/y51Cv4wnsPw), this is a mobile-first to-do app with a strong focus on accessibilty and being screen-reader friendly.
 
 After completing the tutorial, I figured it would be a useful learning exercise to rebuild the app with React (the tutorial uses HTML, SASS and vanilla JS) and then customise the styling and expand the functionality.
 
