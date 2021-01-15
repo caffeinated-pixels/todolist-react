@@ -49,6 +49,10 @@ footer p {
   }
 }
 
+footer .githubIcon {
+  color: black;
+}
+
 hr {
   border-top: 2px solid black;
 }
