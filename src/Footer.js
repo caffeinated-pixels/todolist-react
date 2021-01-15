@@ -25,15 +25,17 @@ export default function Footer() {
           title="Stevie's web app portofolio page"
         >
           Stevie Gill
-        </a>{' '}
+        </a>
+      </p>
+      <p>
         <a
           href="https://github.com/caffeinated-pixels/todolist-react"
           target="_blank"
           rel="noreferrer"
           title="To-Do app Github repo"
-          className="githubIcon"
         >
-          <FontAwesomeIcon icon={faGithubSquare} />
+          <FontAwesomeIcon icon={faGithubSquare} className="githubIcon" />{' '}
+          Github repo
         </a>
       </p>
     </footer>
