@@ -72,19 +72,24 @@ export default class App extends Component {
 
   handleCheck = stringId => {
     const index = this.getIndex(stringId)
-
     const removedText = this.state.toDoList[index].toDoItem
+
     // updated check property for toDoItem in state
     this.setState(prevState => {
       const updatedList = [...prevState.toDoList]
+
+      const checkedOrUnchecked = this.isChecked(prevState.toDoList[index].check)
+
       updatedList[index].check = !updatedList[index].check
       return {
         ...prevState,
         toDoList: updatedList,
-        confirmation: `${removedText} removed.`
+        confirmation: `${removedText} ${checkedOrUnchecked}.`
       }
     })
   }
+
+  isChecked = checkProp => (checkProp ? 'unchecked' : 'checked')
 
   handleRemove = stringId => {
     const index = this.getIndex(stringId)
