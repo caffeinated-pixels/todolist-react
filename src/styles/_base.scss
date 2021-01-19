@@ -11,6 +11,7 @@ $button-textcolor: #fff;
 $add-button-color: #2dc133;
 // $clear-button-color: #9f6060;
 $clear-button-color: #b92b2b;
+$link-color: #f9fab8;
 $link-color-hover: #b45922;
 
 $dark-grey: #1f1f1f;
@@ -66,7 +67,6 @@ footer {
   @include mq(768px) {
     font-size: 0.8rem;
   }
-
 }
 
 hr {
@@ -74,11 +74,16 @@ hr {
 }
 
 a {
-  // color: #3399ff;
-  font-weight: 600;
+  color: $link-color;
+  font-weight: 800;
   text-decoration: none;
+  // order of pseudo classes matters here!
+  &:visited {
+    color: $link-color;
+  }
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: $link-color-hover;
     filter: drop-shadow(1px 1px 2px $dark-grey) brightness(120%);
   }

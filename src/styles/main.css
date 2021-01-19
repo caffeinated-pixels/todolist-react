@@ -54,11 +54,16 @@ hr {
 }
 
 a {
-  font-weight: 600;
+  color: #f9fab8;
+  font-weight: 800;
   text-decoration: none;
 }
 
-a:hover, a:focus {
+a:visited {
+  color: #f9fab8;
+}
+
+a:hover, a:focus, a:active {
   color: #b45922;
   filter: drop-shadow(1px 1px 2px #1f1f1f) brightness(120%);
 }
