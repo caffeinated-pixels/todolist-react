@@ -6,19 +6,10 @@ export default function Footer() {
   return (
     <footer>
       <p>
-        Based on Dave Gray's excellent{' '}
-        <a
-          href="https://youtu.be/y51Cv4wnsPw"
-          title="link to tutorial on YouTube"
-        >
-          video tutorial
-        </a>
-      </p>
-      <p>
-        Rebuilt in React and expanded by{' '}
+        Coded by{' '}
         <a
           href="https://steviegill-webportfolio.netlify.app/"
-          title="Stevie's web app portofolio page"
+          title="Stevie Gill's portofolio page"
         >
           Stevie Gill
         </a>
