@@ -35,7 +35,7 @@ section {
 footer {
   margin-top: 0.7rem;
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 
 footer p {
@@ -54,18 +54,18 @@ hr {
 }
 
 a {
-  color: #f9fab8;
+  color: #500808;
   font-weight: 800;
   text-decoration: none;
 }
 
 a:visited {
-  color: #f9fab8;
+  color: #500808;
 }
 
 a:hover, a:focus, a:active {
   color: #b45922;
-  filter: drop-shadow(1px 1px 2px #1f1f1f) brightness(120%);
+  filter: drop-shadow(1px 1px 1px #1f1f1f) brightness(120%);
 }
 
 .githubIcon {

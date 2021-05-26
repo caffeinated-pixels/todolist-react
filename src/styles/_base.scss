@@ -11,7 +11,7 @@ $button-textcolor: #fff;
 $add-button-color: #2dc133;
 // $clear-button-color: #9f6060;
 $clear-button-color: #b92b2b;
-$link-color: #f9fab8;
+$link-color: #500808;
 $link-color-hover: #b45922;
 
 $dark-grey: #1f1f1f;
@@ -58,7 +58,7 @@ footer {
   // font-size: 0.95rem;
   margin-top: 0.7rem;
   text-align: center;
-  color: $button-textcolor;
+  color: #000;
 
   p {
     padding-bottom: 0.2rem;
@@ -85,7 +85,7 @@ a {
   &:focus,
   &:active {
     color: $link-color-hover;
-    filter: drop-shadow(1px 1px 2px $dark-grey) brightness(120%);
+    filter: drop-shadow(1px 1px 1px $dark-grey) brightness(120%);
   }
 }
 
