@@ -1,8 +1,17 @@
 import ListTitle from './ListTitle.tsx'
-import UncheckedItems from './UncheckedItems'
-import CheckedItems from './CheckedItems'
+import UncheckedItems from './UncheckedItems.js'
+import CheckedItems from './CheckedItems.js'
 
-export default function ListContainer(props) {
+interface Props {
+  handleClear: () => void
+  toDoList: []
+  handleCheck: (stringId: string) => void
+  handleRemove: (stringId: string) => void
+  handleClearChecked: () => void
+  confirmation: string
+}
+
+export default function ListContainer(props: Props) {
   return (
     <section className="listContainer">
       <ListTitle handleClear={props.handleClear} />

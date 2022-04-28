@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import NewItemEntry from './NewItemEntry'
-import ListContainer from './ListContainer'
+import ListContainer from './ListContainer.tsx'
 import Footer from './Footer.tsx'
 
 export default function App() {
