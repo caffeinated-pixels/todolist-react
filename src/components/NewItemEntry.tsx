@@ -1,7 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
-export default function NewItemEntry(props) {
+interface Props {
+  handleTextInput: (event: any) => void
+  handleSubmit: (event: any) => void
+  value: string
+}
+
+export default function NewItemEntry(props: Props) {
   return (
     <section className="newItemEntry">
       <form id="itemEntryForm" onSubmit={props.handleSubmit}>
@@ -9,10 +15,10 @@ export default function NewItemEntry(props) {
         <input
           id="newItem"
           type="text"
-          size="40"
+          size={40}
           autoComplete="off"
           placeholder="Add Item"
-          tabIndex="0"
+          tabIndex={0}
           value={props.value}
           onChange={props.handleTextInput}
         />
@@ -21,7 +27,7 @@ export default function NewItemEntry(props) {
           className="button"
           title="Add new item"
           aria-label="Add new item to list"
-          tabIndex="0"
+          tabIndex={0}
         >
           <FontAwesomeIcon icon={faPlus} />
         </button>
