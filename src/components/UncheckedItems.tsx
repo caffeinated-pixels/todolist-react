@@ -1,7 +1,16 @@
 import itemsCreator from '../helpers/itemsCreator'
 import isPlural from '../helpers/isPlural'
 
-export default function UncheckedItems(props) {
+interface Props {
+  handleClear: () => void
+  toDoList: []
+  handleCheck: (stringId: string) => void
+  handleRemove: (stringId: string) => void
+  handleClearChecked: () => void
+  confirmation: string
+}
+
+export default function UncheckedItems(props: Props) {
   const uncheckedItems = itemsCreator(props, false)
 
   const itemsNum = uncheckedItems.length
@@ -9,7 +18,7 @@ export default function UncheckedItems(props) {
 
   return (
     <div id="uncheckedItems">
-      <h3 className="itemsHeader" tabIndex="0">
+      <h3 className="itemsHeader" tabIndex={0}>
         {itemsNum} Uncompleted {itemOrItems}
       </h3>
       {uncheckedItems}

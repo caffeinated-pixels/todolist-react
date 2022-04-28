@@ -1,5 +1,5 @@
 import ListTitle from './ListTitle.tsx'
-import UncheckedItems from './UncheckedItems.js'
+import UncheckedItems from './UncheckedItems.tsx'
 import CheckedItems from './CheckedItems.js'
 
 interface Props {
