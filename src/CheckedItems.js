@@ -1,4 +1,3 @@
-import React from 'react'
 import itemsCreator from './itemsCreator'
 import isPlural from './isPlural'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

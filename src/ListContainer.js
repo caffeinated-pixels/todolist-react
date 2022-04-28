@@ -1,4 +1,3 @@
-import React from 'react'
 import ListTitle from './ListTitle'
 import UncheckedItems from './UncheckedItems'
 import CheckedItems from './CheckedItems'

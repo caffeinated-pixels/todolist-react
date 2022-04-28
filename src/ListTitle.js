@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function ListTitle(props) {
   return (
     <div className="listTitle">
