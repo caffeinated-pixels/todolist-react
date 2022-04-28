@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import NewItemEntry from './NewItemEntry'
 import ListContainer from './ListContainer'
-import Footer from './Footer'
+import Footer from './Footer.tsx'
 
 export default function App() {
   const [toDos, setToDos] = useState({
