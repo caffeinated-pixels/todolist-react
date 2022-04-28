@@ -3,7 +3,14 @@ import isPlural from '../helpers/isPlural'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckSquare } from '@fortawesome/free-solid-svg-icons'
 
-export default function CheckedItems(props) {
+interface Props {
+  toDoList: []
+  handleCheck: (stringId: string) => void
+  handleRemove: (stringId: string) => void
+  handleClearChecked: () => void
+}
+
+export default function CheckedItems(props: Props) {
   const checkedItems = itemsCreator(props, true)
 
   const itemsNum = checkedItems.length
@@ -14,7 +21,7 @@ export default function CheckedItems(props) {
       <div id="checkedItems" className="checkedItems">
         <hr />
         <div className="checkedHeader itemsHeader">
-          <h3 className="" tabIndex="0">
+          <h3 className="" tabIndex={0}>
             {itemsNum} Completed {itemOrItems}
           </h3>
           <button
@@ -22,7 +29,7 @@ export default function CheckedItems(props) {
             className="button"
             title="Clear all checked checked items"
             aria-label="Remove all checked items"
-            tabIndex="0"
+            tabIndex={0}
             onClick={props.handleClearChecked}
           >
             clear <FontAwesomeIcon icon={faCheckSquare} />

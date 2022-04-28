@@ -1,6 +1,6 @@
-import ListTitle from './ListTitle.tsx'
-import UncheckedItems from './UncheckedItems.tsx'
-import CheckedItems from './CheckedItems.js'
+import ListTitle from './ListTitle'
+import UncheckedItems from './UncheckedItems'
+import CheckedItems from './CheckedItems'
 
 interface Props {
   handleClear: () => void

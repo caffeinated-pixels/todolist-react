@@ -2,12 +2,9 @@ import itemsCreator from '../helpers/itemsCreator'
 import isPlural from '../helpers/isPlural'
 
 interface Props {
-  handleClear: () => void
   toDoList: []
   handleCheck: (stringId: string) => void
   handleRemove: (stringId: string) => void
-  handleClearChecked: () => void
-  confirmation: string
 }
 
 export default function UncheckedItems(props: Props) {
