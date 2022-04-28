@@ -1,4 +1,4 @@
-import ListTitle from './ListTitle'
+import ListTitle from './ListTitle.tsx'
 import UncheckedItems from './UncheckedItems'
 import CheckedItems from './CheckedItems'
 
