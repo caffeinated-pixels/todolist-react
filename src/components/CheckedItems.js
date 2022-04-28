@@ -1,5 +1,5 @@
-import itemsCreator from './itemsCreator'
-import isPlural from './isPlural'
+import itemsCreator from '../helpers/itemsCreator'
+import isPlural from '../helpers/isPlural'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckSquare } from '@fortawesome/free-solid-svg-icons'
 

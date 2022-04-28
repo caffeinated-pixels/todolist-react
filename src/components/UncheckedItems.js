@@ -1,5 +1,5 @@
-import itemsCreator from './itemsCreator'
-import isPlural from './isPlural'
+import itemsCreator from '../helpers/itemsCreator'
+import isPlural from '../helpers/isPlural'
 
 export default function UncheckedItems(props) {
   const uncheckedItems = itemsCreator(props, false)
