@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { ToDos, ToDoItem } from '../constants/interfaces'
 import NewItemEntry from './NewItemEntry'
 import ListContainer from './ListContainer'
@@ -11,6 +11,8 @@ export default function App() {
     confirmation: '',
     idTally: 0,
   })
+
+  const newItemRef = useRef(null)
 
   useEffect(() => {
     const storedState = localStorage.getItem('myToDoList')
@@ -53,8 +55,7 @@ export default function App() {
 
   const setFocusOnItemEntry = () => {
     // sets focus back to input on rerender
-    // todo: change to Ref
-    document.getElementById('newItem').focus()
+    newItemRef.current.focus()
   }
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -128,6 +129,7 @@ export default function App() {
     <div>
       <main>
         <NewItemEntry
+          ref={newItemRef}
           handleTextInput={handleTextInput}
           handleSubmit={handleSubmit}
           value={toDos.toDoItem}
