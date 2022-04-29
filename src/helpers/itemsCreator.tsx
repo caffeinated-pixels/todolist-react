@@ -1,12 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-
-interface ToDoItem {
-  id: string
-  check: boolean
-  toDoItem: string
-}
-
+import { ToDoItem } from '../constants/interfaces'
 interface Props {
   toDoList: ToDoItem[]
   handleCheck: (stringId: string) => void
