@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ToDos, ToDoItem } from '../constants/interfaces'
 import NewItemEntry from './NewItemEntry'
 import ListContainer from './ListContainer'
@@ -29,7 +29,7 @@ export default function App() {
     localStorage.setItem('myToDoList', JSON.stringify(toDos))
   }, [toDos])
 
-  const handleTextInput = (event) => {
+  const handleTextInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     setToDos((prevState) => ({
       ...prevState,
       toDoItem: event.target.value,
@@ -57,7 +57,7 @@ export default function App() {
     document.getElementById('newItem').focus()
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault() // prevents page reloading on submit
     processSubmission()
     setFocusOnItemEntry()
@@ -89,12 +89,12 @@ export default function App() {
     })
   }
 
-  const getIndex = (stringId) => {
+  const getIndex = (stringId: string) => {
     const id = Number(stringId) // convert string to number
     return toDos.toDoList.findIndex((x) => x.id === id)
   }
 
-  const handleCheck = (stringId) => {
+  const handleCheck = (stringId: string) => {
     const index = getIndex(stringId)
     const removedText = toDos.toDoList[index].toDoItem
 
@@ -115,7 +115,7 @@ export default function App() {
     })
   }
 
-  const handleRemove = (stringId) => {
+  const handleRemove = (stringId: string) => {
     const index = getIndex(stringId)
 
     setToDos((prevState) => {
