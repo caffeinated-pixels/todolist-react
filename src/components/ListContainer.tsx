@@ -2,9 +2,15 @@ import ListTitle from './ListTitle'
 import UncheckedItems from './UncheckedItems'
 import CheckedItems from './CheckedItems'
 
+interface ToDoItem {
+  id: number
+  check: boolean
+  toDoItem: string
+}
+
 interface Props {
   handleClear: () => void
-  toDoList: []
+  toDoList: ToDoItem[]
   handleCheck: (stringId: string) => void
   handleRemove: (stringId: string) => void
   handleClearChecked: () => void

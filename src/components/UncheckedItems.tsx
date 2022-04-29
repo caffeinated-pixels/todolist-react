@@ -1,8 +1,14 @@
 import itemsCreator from '../helpers/itemsCreator'
 import isPlural from '../helpers/isPlural'
 
+interface ToDoItem {
+  id: number
+  check: boolean
+  toDoItem: string
+}
+
 interface Props {
-  toDoList: []
+  toDoList: ToDoItem[]
   handleCheck: (stringId: string) => void
   handleRemove: (stringId: string) => void
 }

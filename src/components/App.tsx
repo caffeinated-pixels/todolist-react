@@ -1,11 +1,24 @@
 import { useState, useEffect } from 'react'
 import NewItemEntry from './NewItemEntry'
-import ListContainer from './ListContainer.tsx'
-import Footer from './Footer.tsx'
+import ListContainer from './ListContainer'
+import Footer from './Footer'
+
+interface ToDoItem {
+  id: number
+  check: boolean
+  toDoItem: string
+}
+
+interface ToDos {
+  toDoList: ToDoItem[]
+  toDoItem: string
+  confirmation: string
+  idTally: number
+}
 
 export default function App() {
-  const [toDos, setToDos] = useState({
-    toDoList: [],
+  const [toDos, setToDos] = useState<ToDos>({
+    toDoList: [] as ToDoItem[],
     toDoItem: '',
     confirmation: '',
     idTally: 0,
@@ -81,7 +94,9 @@ export default function App() {
 
   const handleClearChecked = () => {
     setToDos((prevState) => {
-      const filteredList = prevState.toDoList.filter((x) => !x.check)
+      const filteredList = prevState.toDoList.filter(
+        (toDoItem) => !toDoItem.check
+      )
       return { ...prevState, toDoList: filteredList }
     })
   }
