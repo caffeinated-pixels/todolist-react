@@ -40,12 +40,17 @@ export default function App() {
 
   const processSubmission = () => {
     // add input text to state.toDoItem & clear input box
-    const newEntryText = toDos.toDoItem.trim() // trim whitespace
+    const newEntryText: string = toDos.toDoItem.trim() // trim whitespace
+
     if (newEntryText.length === 0) return // stops if length < 1
     setToDos((prevState) => ({
       toDoList: [
         ...prevState.toDoList,
-        { id: prevState.idTally, check: false, toDoItem: newEntryText },
+        {
+          id: prevState.idTally.toString(),
+          check: false,
+          toDoItem: newEntryText,
+        },
       ],
       toDoItem: '',
       confirmation: `${newEntryText} added.`,
@@ -93,8 +98,7 @@ export default function App() {
   }
 
   const getIndex = (stringId: string) => {
-    const id = Number(stringId) // convert string to number
-    return toDos.toDoList.findIndex((x) => x.id === id)
+    return toDos.toDoList.findIndex((toDoItem) => toDoItem.id === stringId)
   }
 
   const handleCheck = (stringId: string) => {

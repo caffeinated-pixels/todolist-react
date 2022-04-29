@@ -1,5 +1,5 @@
 export interface ToDoItem {
-  id: number
+  id: string
   check: boolean
   toDoItem: string
 }

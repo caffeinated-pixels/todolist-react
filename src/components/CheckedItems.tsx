@@ -3,6 +3,7 @@ import isPlural from '../helpers/isPlural'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckSquare } from '@fortawesome/free-solid-svg-icons'
 import { ToDoItem } from '../constants/interfaces'
+
 interface Props {
   toDoList: ToDoItem[]
   handleCheck: (stringId: string) => void
