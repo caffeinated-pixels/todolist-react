@@ -12,7 +12,7 @@ export default function App() {
     idTally: 0,
   })
 
-  const newItemRef = useRef(null)
+  const newItemRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     const storedState = localStorage.getItem('myToDoList')
@@ -55,7 +55,9 @@ export default function App() {
 
   const setFocusOnItemEntry = () => {
     // sets focus back to input on rerender
-    newItemRef.current.focus()
+    if (newItemRef.current !== null) {
+      newItemRef.current.focus()
+    }
   }
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

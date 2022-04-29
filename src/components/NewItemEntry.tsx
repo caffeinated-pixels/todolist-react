@@ -10,7 +10,7 @@ interface Props {
   value: string
 }
 
-const NewItemEntry = forwardRef((props: Props, ref: any) => {
+const NewItemEntry = forwardRef<HTMLInputElement, Props>((props, ref) => {
   return (
     <section className="newItemEntry">
       <form id="itemEntryForm" onSubmit={props.handleSubmit}>
