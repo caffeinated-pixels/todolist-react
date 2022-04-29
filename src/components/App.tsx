@@ -41,7 +41,7 @@ export default function App() {
   const processSubmission = () => {
     // add input text to state.toDoItem & clear input box
     const newEntryText = toDos.toDoItem.trim() // trim whitespace
-    if (!newEntryText.length) return // stops if length < 1
+    if (newEntryText.length === 0) return // stops if length < 1
     setToDos((prevState) => ({
       toDoList: [
         ...prevState.toDoList,
