@@ -1,13 +1,7 @@
 import ListTitle from './ListTitle'
 import UncheckedItems from './UncheckedItems'
 import CheckedItems from './CheckedItems'
-
-interface ToDoItem {
-  id: number
-  check: boolean
-  toDoItem: string
-}
-
+import { ToDoItem } from '../constants/interfaces'
 interface Props {
   handleClear: () => void
   toDoList: ToDoItem[]

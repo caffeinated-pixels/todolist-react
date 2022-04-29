@@ -1,12 +1,6 @@
 import itemsCreator from '../helpers/itemsCreator'
 import isPlural from '../helpers/isPlural'
-
-interface ToDoItem {
-  id: number
-  check: boolean
-  toDoItem: string
-}
-
+import { ToDoItem } from '../constants/interfaces'
 interface Props {
   toDoList: ToDoItem[]
   handleCheck: (stringId: string) => void

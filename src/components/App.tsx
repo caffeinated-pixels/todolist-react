@@ -1,20 +1,8 @@
 import { useState, useEffect } from 'react'
+import { ToDos, ToDoItem } from '../constants/interfaces'
 import NewItemEntry from './NewItemEntry'
 import ListContainer from './ListContainer'
 import Footer from './Footer'
-
-interface ToDoItem {
-  id: number
-  check: boolean
-  toDoItem: string
-}
-
-interface ToDos {
-  toDoList: ToDoItem[]
-  toDoItem: string
-  confirmation: string
-  idTally: number
-}
 
 export default function App() {
   const [toDos, setToDos] = useState<ToDos>({
