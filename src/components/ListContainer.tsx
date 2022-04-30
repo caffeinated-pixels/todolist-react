@@ -1,9 +1,17 @@
-import React from 'react'
 import ListTitle from './ListTitle'
 import UncheckedItems from './UncheckedItems'
 import CheckedItems from './CheckedItems'
+import { ToDoItem } from '../constants/interfaces'
+interface Props {
+  handleClear: () => void
+  toDoList: ToDoItem[]
+  handleCheck: (stringId: string) => void
+  handleRemove: (stringId: string) => void
+  handleClearChecked: () => void
+  confirmation: string
+}
 
-export default function ListContainer(props) {
+export default function ListContainer(props: Props) {
   return (
     <section className="listContainer">
       <ListTitle handleClear={props.handleClear} />

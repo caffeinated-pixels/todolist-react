@@ -1,14 +1,20 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { ToDoItem } from '../constants/interfaces'
+interface Props {
+  toDoList: ToDoItem[]
+  handleCheck: (stringId: string) => void
+  handleRemove: (stringId: string) => void
+  handleClearChecked?: () => void
+}
 
-export default function itemsCreator(props, isChecked) {
+export default function itemsCreator(props: Props, isChecked: boolean) {
   let filtered = []
-
   // tests whether to filter for checked or unchecked items
   if (!isChecked) {
-    filtered = props.toDoList.filter(entry => !entry.check)
+    filtered = props.toDoList.filter((entry) => !entry.check)
   } else {
-    filtered = props.toDoList.filter(entry => entry.check)
+    filtered = props.toDoList.filter((entry) => entry.check)
   }
 
   return filtered.map((entry, i) => {
@@ -18,7 +24,7 @@ export default function itemsCreator(props, isChecked) {
           <input
             type="checkbox"
             id={entry.id}
-            tabIndex="0"
+            tabIndex={0}
             checked={entry.check}
             className="checkbox"
             onChange={() => props.handleCheck(entry.id)}
@@ -31,7 +37,7 @@ export default function itemsCreator(props, isChecked) {
           className="delete"
           onClick={() => props.handleRemove(entry.id)}
           role="button"
-          tabIndex="0"
+          tabIndex={0}
           aria-label="Delete item"
           aria-hidden="false"
           focusable="true"
