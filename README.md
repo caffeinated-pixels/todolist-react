@@ -2,7 +2,7 @@
 
 Based on [Dave Gray's excellent YT tutorial](https://youtu.be/y51Cv4wnsPw), this is a mobile-first to-do app with persistent data (using the Web Storage API) and a strong focus on accessibilty and being screen-reader friendly.
 
-After completing the tutorial, I figured it would be a useful learning exercise to rebuild the app with React (the tutorial uses HTML, SASS and vanilla JS) and then tweak the styling and expand the functionality.
+After completing the tutorial, I figured it would be a useful learning exercise to rebuild the app with React (the tutorial uses HTML, SASS and vanilla JS) and then tweak the styling and expand the functionality. More recently (April 2022), I converted the source code to TypeScript as another learning exercise.
 
 Some features I added include:
 
